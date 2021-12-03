@@ -1,0 +1,49 @@
+Первое ДЗ 
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я $ pwd
+2) Создать папку    $ mkdir qa25
+3) Зайти в папку    $ cd qa25
+4) Создать 3 папки  $ mkdir dir1 dir2 dir3
+5) Зайти в любоую папку $ cd  dir1
+6) Создать 5 файлов (3 txt, 2 json) $ touch t1.txt t2.txt t3.txt j1.json j2.json
+7) Создать 3 папки $ mkdir d1 d2 d3
+8. Вывести список содержимого папки ls
+9) + Открыть любой txt файл $ vim t1.txt	
+10) + написать туда что-нибудь, любой текст  i и пишем текст
+11) + сохранить и выйти. Esc :wq закрыть сохранить, :q! закріть без сохранения изменения
+12) Выйти из папки на уровень выше $ cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.$ mw dir1/{t1.txt,t2.txt,t3.txt} d1
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.$ cp dir1/d1/{t1.txt,t2.txt,t3.txt} dir1/d2
+15) Найти файл по имени $ find -iname T1.txt
+./dir1/d1/t1.txt
+./dir1/d2/t1.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. $ tail -f tmp/swtag.log | grep 2021-12-01
+$ tail -f tmp/swtag.log > c/Users/Admin/qa25/dir1/log.txt
+17) вывести несколько первых строк 5 из текстового файла head -5 dir1/log.txt
+18) вывести несколько последних строк из текстового файла tail dir1/log.txt (10 по умолчанию)
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. less tmp/swtag.log
+20) вывести дату и время $ date
+                           Thu Dec  1 17:47:53     2021
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000
+
+curl http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000
+[1] 338
+[2] 339
+[2]+  Done                    age=32
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+  cd qa25 ; mkdir q1 q2 q3 ; cd q1 ; touch tq1.txt tq2.txt tq3.txt jq1.json jq2.json ; mkdir dq1 dq2 dq3 ; ls ;cd ..; mv q1/{tq1.txt,tq2.txt,tq3.txt} q2
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
+
+https://losst.ru/nachnite-izuchat-linux-pryamo-sejchas
