@@ -14,23 +14,97 @@ GIT Homework 1
 Файл со сценарием и ссылку на свой гит хаб отправляйте менторам на проверку.
 
 JSON
- 4. Создать внешний репозиторий c названием JSON.
- 5. Клонировать репозиторий JSON на локальный компьютер.
- 6. Внутри локального JSON создать файл “new.json”.
- 7. Добавить файл под гит.
- 8. Закоммитить файл.
- 9. Отправить файл на внешний GitHub репозиторий.
- 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
- 11. Отправить изменения на внешний репозиторий.
- 12. Создать файл preferences.json
- 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
- 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
- 15. Отправить сразу 2 файла на внешний репозиторий.
+ 4. Создать внешний репозиторий c названием JSON.  На https://github.com/ open Repositories and click batton <NEW> compleet  <Repository name> JSON choose <Public> click batton <Create repository> create New file commit copy HTTP URL of JSON repository 
+ 5. Клонировать репозиторий JSON на локальный компьютер. Open GitBush  $ git clone paste HTTP URL of JSON repository
+ 6. Внутри локального JSON создать файл “new.json”. cd /JSON ; touch new.json
+ 7. Добавить файл под гит. git add new.json
+ 8. Закоммитить файл. git commit -m "new fail"
+ 9. Отправить файл на внешний GitHub репозиторий. git push
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON. vim new.json
+{
+ "name":"Iryna",
+ "surname":"Goncharuk",
+ "pets":"2",
+ "pet's name":"Uma",
+ "pet's name":"Quentin",
+ "cat or dog":"cat",
+ "flat or house":"flat",
+ "number":"7"
+ }
+
+ 11. Отправить изменения на внешний репозиторий. git status    git commit -am "change file" git push
+ 12. Создать файл preferences.json  touch preferences.json
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.  vim preferences.json i
+
+{
+ "favorite movie":"Dune",
+ "favorite TV series":"Sex and the City",
+ "favorite food":"chicken",
+ "favorite season":"summer",cp
+ "favorite cantry":"France"
+ }
+:wq
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON touch sklls.json ; vim skills.json
+{ 
+              "name": "Skills",
+              "description": [
+        	   "1. Basic theory (What is testing, bug reports, documentation, types, methods, testing directions, etc.) SDLC, STLC.",
+                   "2. What is client-server architecture.",
+                   "3. HTTP Methods of requests to the server.",
+                   "4. HTTP server response codes.",
+                   "5. Structures of HTTP requests and responses.",
+                   "6. What is JSON, XML. Their structure.",
+                   "7. API testing via Postman (JS, API autotests).",
+                   "8. Removing and reading logs from an external server.",
+                   "9. Sniffing http web traffic through Charles and Fiddler.",
+                   "10. Dev Tools of web browsers (Google Chrome, FireFox).",
+                   "11. VPN. (How it works, why you need it, how to use it, tool options)",
+                   "12. Mobile testing.",
+                   "13. Feature of iOS, Android, guidelines.",
+                   "14. Build iOS applications on Xcode. (Those who don't have a Mac computer will just take a look)",
+                   "15. Build Android applications on Android Studio.",
+                   "16. ADB (management of android devices).",
+                   "17. Setting up proxy and vpn on iOS and Android.",
+                   "18. Interception (sniffing) of mobile traffic through Charles and Fiddler on iOS and Android.",
+                   "19. Command line (terminal) Linux (copy, create, view, move files on servers without a graphical interface)",
+                  "20. Basics of bash scripting, automation of routine tasks on the server.",
+                  "21. Access to remote servers.",
+                  "22. Basics of SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).",
+                  "23. Postgres database (installation, configuration and use).",
+                  "24. Non-relational database Redis (installation, configuration and use).",
+                  "25. Load testing in Jmeter.",
+                  "26. Scrum development methodology.",
+                  "27. Python. (Learning the basics. Building a client-server application)"
+                   ]
+    }
+
+ 15. Отправить сразу 2 файла на внешний репозиторий. git add. ; git commit -m "chenges" git push
  16. На веб интерфейсе создать файл bug_report.json.
- 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе. 
+{
+"ID": "125",
+"Summary": "The amount of sort product specified in the sidebar is diferent from the proposed on the page",
+"Type report": "Bug",
+"Status":"Opened",
+"Priority": "Trivial",
+"Resolution":"Unresolved",
+"Description":{
+"Preconditions":[
+"Launch Google Chrom",
+"Go to https://rozetka.com.ua"],
+"Steps to reproduce":[
+"Press the <Каталог> button.",
+"Select category <Ноутбуки и компьютеры>", 
+"click on link <Ноутбуки> or click on picture above link.",
+"choose in the sidebar <Huawai (12)>"],
+"Actual result":
+"the page with 11 offers  of the Huawai laptop open.",
+"Attachments":""
+"Expected result": "the page with 12 offers  of the Huawai laptop opens."
+}}
  18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
  19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 20. Синхронизировать внешний и локальный репозиторий JSON
+ 20. Синхронизировать внешний и локальный репозиторий JSON  git fetch   git pull
 
 
 XML
