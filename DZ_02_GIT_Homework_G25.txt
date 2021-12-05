@@ -1,4 +1,4 @@
-GIT Homework 1
+GIT Homework 1  https://github.com/IrishkaG
 
 Для выполнения задания у вас должен быть установлен для Windows - GitBash.
 Создан аккаунт в GitHub
@@ -83,7 +83,7 @@ JSON
  17. Сделать Commit changes (сохранить) изменения на веб интерфейсе. 
 {
 "ID": "125",
-"Summary": "The amount of sort product specified in the sidebar is diferent from the proposed on the page",
+"Summary": "The amount of sort product specified in the sidebar is diferent from the proposed on the corresponding page",
 "Type report": "Bug",
 "Status":"Opened",
 "Priority": "Trivial",
@@ -117,47 +117,139 @@ XML
  26. Отправить файл на внешний GitHub репозиторий.   git push
  27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML. vim new.xml i
 
-<About myself>
-  <name>Iryna</name>
-  <mail>Femail</mail>
-  <age>48</age>
-  <quantaty of pets>2</quantaty of pets>
-  <name>Uma</name>
-  <name>Quentin</name>
-  <breed>Maine Coon</breed>
-</About myself>
+<?xml version="1.0" encoding="UTF-8"?>
+-<root>
+<name>Iryna Goncharuk</name>
+-<About>
+About myself 
+<mail>Femail</mail>
+<age>48</age>
+</About>
+-<pets>
+About pets 
+<quantaty_p> 2</quantaty_p>
+<name_p>Uma</name_p>
+<name_p>Quentin</name_p>
+<breed>Maine Coon</breed>
+</pets>
+</root>
 :wq
 
- 28. Отправить изменения на внешний репозиторий. git commit -am "change new.xml file"
- 29. Создать файл preferences.xml touch preferences.xml
+ 28. Отправить изменения на внешний репозиторий.  git commit -m "renew new.xml file"; git push
+ 29. Создать файл preferences.xml $ touch preferences.xml
  30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
 
+<?xml version="1.0" encoding="UTF-8"?>
+-<root>
+-<name>
+<first>Irina</first>
+<last>Goncharuk</last>
+</name>
+-<description>
+About my preferences. 
+<message1>My favorite movie is Dune.</message1>
+<message2>My favorite TV series is Sex and the City.</message2>
+<message3>My favorite food is chicken.</message3>
+<message4>My favorite season is summer.</message4>
+<message5>France is the country were i am going to</message5>
+</description>
+</root> 
+:wq
  31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML touch sklls.xml
- 
-32. Сделать коммит в одну строку.
- 33. Отправить сразу 2 файла на внешний репозиторий.
+<?xml version="1.0" encoding="UTF-8"?>
+-<root>
+-<sk_name>
+Name Skills 
+<para>Descriptio point </para>
+<para>1. Basic theory (What is testing, bug reports, documentation, types, methods, testing directions, etc.) SDLC, STLC. </para>
+<para>2. What is client-server architecture. </para>
+<para>3. HTTP Methods of requests to the server. </para>
+<para>4. HTTP server response codes. </para>
+<para>5. Structures of HTTP requests and responses. </para>
+<para>6. What is JSON, XML. Their structure. </para>
+<para>7. API testing via Postman (JS, API autotests). </para>
+<para>8. Removing and reading logs from an external server. </para>
+<para>9. Sniffing http web traffic through Charles and Fiddler. </para>
+<para>10. Dev Tools of web browsers (Google Chrome, FireFox). </para>
+<para>11. VPN. (How it works, why you need it, how to use it, tool options) </para>
+<para>12. Mobile testing. </para>
+<para>13. Feature of iOS, Android, guidelines. </para>
+<para>14. Build iOS applications on Xcode. (Those who don't have a Mac computer will just take a look) </para>
+<para>15. Build Android applications on Android Studio. </para>
+<para>16. ADB (management of android devices). </para>
+<para>17. Setting up proxy and vpn on iOS and Android. </para>
+<para>18. Interception (sniffing) of mobile traffic through Charles and Fiddler on iOS and Android. </para>
+<para>19. Command line (terminal) Linux (copy, create, view, move files on servers without a graphical interface) </para>
+<para>20. Basics of bash scripting, automation of routine tasks on the server. </para>
+<para>21. Access to remote servers. </para>
+<para>22. Basics of SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join). </para>
+<para>23. Postgres database (installation, configuration and use). </para>
+<para>24. Non-relational database Redis (installation, configuration and use). </para>
+<para>25. Load testing in Jmeter. </para>
+<para>26. Scrum development methodology. </para>
+<para>27. Python. (Learning the basics. Building a client-server application) </para>
+</sk_name>
+</root>
+:wq
+32. Сделать коммит в одну строку. git commit -am "create new file"
+ 33. Отправить сразу 2 файла на внешний репозиторий. git push
  34. На веб интерфейсе создать файл bug_report.xml.
- 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+<?xml version="1.0" encoding="UTF-8"?>
+-<root>
+-<id>ID<number>125</number>
+</id>
+-<sum>Sumary<text>Button "дешевле" does not sort within the previously found product group</text>
+</sum>
+-<doctype>Type report<type>Bug</type>
+</doctype>
+-<status>Status<tipe_st>Opened</tipe_st>
+</status>
+-<priority>Priority<tipe_pr>Major</tipe_pr>
+</priority>
+-<resolution>Resolution<tipe_r>Unresolved</tipe_r>
+</resolution>
+-<descript>Description 
+-<param>Preconditions 
+<text>Launch Google Chrom</text>
+<text>Go to Open URL https://prom.ua</text>
+</param>
+-<param>Steps to reproduce 
+<text>1. put in Search line "велосипед"</text>
+<text>2. choose "велосипед" on the side panel</text>
+<text>3. in the upper left corner click button "дешевле"</text>
+</param>
+-<param>Actual result 
+<text>Any bicycle is not presented оn the page</text>
+</param>
+-<param>Attachments
+<text>""</text>
+</param>
+-<param>Expected result 
+<text>Sort all bike from cheapest to most expensive</text>
+</param>
+</descript>
+</root>
+
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе. кнопка Commit changees
  36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
  37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 38. Синхронизировать внешний и локальный репозиторий XML
+ 38. Синхронизировать внешний и локальный репозиторий XML git fetch git pull
 ================================================================================================================
 TXT
  1. Создать внешний репозиторий c названием TXT.
- 2. Клонировать репозиторий TXT на локальный компьютер.
- 3. Внутри локального TXT создать файл “new.txt”.
+ 2. Клонировать репозиторий TXT на локальный компьютер. git clone URL
+ 3. Внутри локального TXT создать файл “new.txt”. touch new.txt
  4. Добавить файл под гит.  git add new.txt
- 5. Закоммитить файл.
- 6. Отправить файл на внешний GitHub репозиторий.
+ 5. Закоммитить файл. git commit -m "new file"
+ 6. Отправить файл на внешний GitHub репозиторий. git push
  7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
- 8. Отправить изменения на внешний репозиторий.
- 9. Создать файл preferences.txt
- 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
- 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
- 12. Сделать коммит в одну строку.
- 13. Отправить сразу 2 файла на внешний репозиторий.
- 14. На веб интерфейсе создать файл bug_report.txt.
- 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 8. Отправить изменения на внешний репозиторий. git commit -am "renew file"
+ 9. Создать файл preferences.txt  touch preferences.txt
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT. vim preferences.txt i   text :wq
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT  touch sklls.txt            12. Сделать коммит в одну строку. 
+ 13. Отправить сразу 2 файла на внешний репозиторий. $ git add . | git commit -m "create new txt file" | git push
+ 14. На веб интерфейсе создать файл bug_report.txt. +
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе. +
  16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
- 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 18. Синхронизировать внешний и локальный репозиторий TXT
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе. +
+ 18. Синхронизировать внешний и локальный репозиторий TXT git pull
