@@ -118,14 +118,14 @@ XML
  27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML. vim new.xml i
 
 <?xml version="1.0" encoding="UTF-8"?>
--<root>
+<root>
 <name>Iryna Goncharuk</name>
--<About>
+<About>
 About myself 
 <mail>Femail</mail>
 <age>48</age>
 </About>
--<pets>
+<pets>
 About pets 
 <quantaty_p> 2</quantaty_p>
 <name_p>Uma</name_p>
@@ -140,12 +140,12 @@ About pets
  30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
 
 <?xml version="1.0" encoding="UTF-8"?>
--<root>
--<name>
+<root>
+<name>
 <first>Irina</first>
 <last>Goncharuk</last>
 </name>
--<description>
+<description>
 About my preferences. 
 <message1>My favorite movie is Dune.</message1>
 <message2>My favorite TV series is Sex and the City.</message2>
@@ -157,8 +157,8 @@ About my preferences.
 :wq
  31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML touch sklls.xml
 <?xml version="1.0" encoding="UTF-8"?>
--<root>
--<sk_name>
+<root>
+<sk_name>
 Name Skills 
 <para>Descriptio point </para>
 <para>1. Basic theory (What is testing, bug reports, documentation, types, methods, testing directions, etc.) SDLC, STLC. </para>
@@ -195,36 +195,36 @@ Name Skills
  33. Отправить сразу 2 файла на внешний репозиторий. git push
  34. На веб интерфейсе создать файл bug_report.xml.
 <?xml version="1.0" encoding="UTF-8"?>
--<root>
--<id>ID<number>125</number>
+<root>
+<id>ID<number>125</number>
 </id>
--<sum>Sumary<text>Button "дешевле" does not sort within the previously found product group</text>
+<sum>Sumary<text>Button "дешевле" does not sort within the previously found product group</text>
 </sum>
--<doctype>Type report<type>Bug</type>
+<doctype>Type report<type>Bug</type>
 </doctype>
--<status>Status<tipe_st>Opened</tipe_st>
+<status>Status<tipe_st>Opened</tipe_st>
 </status>
--<priority>Priority<tipe_pr>Major</tipe_pr>
+<priority>Priority<tipe_pr>Major</tipe_pr>
 </priority>
--<resolution>Resolution<tipe_r>Unresolved</tipe_r>
+<resolution>Resolution<tipe_r>Unresolved</tipe_r>
 </resolution>
--<descript>Description 
--<param>Preconditions 
+<descript>Description 
+<param>Preconditions 
 <text>Launch Google Chrom</text>
 <text>Go to Open URL https://prom.ua</text>
 </param>
--<param>Steps to reproduce 
+<param>Steps to reproduce 
 <text>1. put in Search line "велосипед"</text>
 <text>2. choose "велосипед" on the side panel</text>
 <text>3. in the upper left corner click button "дешевле"</text>
 </param>
--<param>Actual result 
+<param>Actual result 
 <text>Any bicycle is not presented оn the page</text>
 </param>
--<param>Attachments
+<param>Attachments
 <text>""</text>
 </param>
--<param>Expected result 
+<param>Expected result 
 <text>Sort all bike from cheapest to most expensive</text>
 </param>
 </descript>
@@ -237,7 +237,7 @@ Name Skills
 ================================================================================================================
 TXT
  1. Создать внешний репозиторий c названием TXT.
- 2. Клонировать репозиторий TXT на локальный компьютер. git clone URL
+ 2. Клонировать репозиторий TXT на локальный компьютер. git clone URL   git init
  3. Внутри локального TXT создать файл “new.txt”. touch new.txt
  4. Добавить файл под гит.  git add new.txt
  5. Закоммитить файл. git commit -m "new file"
