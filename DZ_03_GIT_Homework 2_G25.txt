@@ -1,0 +1,110 @@
+ GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman        Git branch Postman
+- Jmeter         Git branch Jmeter
+- CheckLists     Git branch CheckList
+- Bag Reports    Git branch Bug_reports
+- SQL            Git branch SQL
+- Charles        Git branch Charles
+- Mobile testing Git branch Mobile_testing
+
+$ git branch
+  Bug_reports
+  Charles
+  CheckList
+  Jmeter
+  MobileTesting
+  Postman
+  SQL
+* main
+
+
+2. Запушить все ветки на внешний репозиторий git push --all
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+git checkout Bug_reports
+touch bug_report.txt
+vim bug_report.txt
+i
+Summary: Schedule page User Interface is currupted on mobaile devices
+Type: Bug
+Status:CLOSED 
+Priority: Minor
+Resolution:resolved
+Environment:iPhone Xs Max Software version 14.6
+Description
+Precondition:
+1 Launch SAFARI
+2 Open URL https://yanair.ua/schedule_all
+Actual result:
+Schedule page User Interface is currupted on mobaile devices
+Expected result:
+Timetable page user interface should be readable on mobile devices
+Attachments
+:wq
+ 
+4. Запушить структуру багрепорта на внешний репозиторий 
+git add bug_report.txt | git commit -m "bug_report.txt added" |
+git push --set-upstream origin Bug_reports
+
+5. Вмержить ветку Bag Reports в Main $git checkout main | git merge Bug_reports
+6. Запушить main на внешний репозиторий. git add bug_report.txt  git push 
+7. В ветке CheckLists набросать структуру чек листа. git checkout CheckList 
+ touch check_list.txt 
+vim check_list 
+=======================================================
+Check-list for web-forms
+Extra high
+- Save the form.
+- The form is saved in web forms (admin panels) or SQL tables.
+- Change the shipping address.
+- E-mail, which receives data from the web form, can be changed in the administrative panel.
+High
+- Relevance of the shipping address.
+- A real e-mail address of the person responsible for processing applications has been registered.
+- Submit the form.
+- Data from the completed form is sent to the administrator by e-mail.
+- Send notification to user.
+- Optional. The user receives a notification to his e-mail about the successful receipt of the application and the subsequent actions that are required of him.
+Navigation
+- Placeholders are provided for the fields.
+- If the field names are not signed, a hint is displayed inside the fields, which disappears when the text is entered.
+- The autocomplete attribute is registered for fields supporting this value.
+The autocomplete attribute substitutes previously entered user data in the field, if the function is not disabled in the browser.
+- Correct work of multi-step forms.
+- Navigation next to the form shows the current stage and the number of remaining steps.
+- Multi-step forms work correctly when navigating using the “Forward” and “Back” buttons in the browser.
+Validation
+- For numeric values from a certain range, there are limiters for the minimum and maximum number of characters.
+- Check for dates, times, and other similar characteristics.
+- For fields that require files to be loaded, the accept attribute is specified, which determines the type of documents to be loaded.
+- For fields whose validation passes through a regular expression, the pattern attribute is specified.
+- The required data format that the user must enter is obvious to him.
+- Available instructions on the format of the input data in the human language.
+- The user doesn’t see the regular expression as a hint to the action.
+- Error messages are understandable to ordinary users and logical.
+Other
+- The form prompts the user for only the necessary data.
+Open the form, visually make sure that you only need to enter the minimum information.
+- If all fields are required, asterisks are not displayed next to their names - the * symbol.
+Open the form and see it visually. It is desirable to have an explanatory text on the mandatory filling of all fields.
+- For an authorized user, all known data about the visitor is automatically inserted in the form fields.
+Make sure visually that the information specified by the user in the profile is automatically displayed in the fields of the forms requesting this data.
+- The text multiline field changes the height when entering a voluminous message, or a scrollbar appears on the right side to view the entire contents.
+Open a form with a multiline text field, enter as many characters as possible into it.
+- A valid TYPE attribute is registered in the form fields, informing the browser of the form element type.
+- The types of dates, time, phone numbers, ranges, url, e-mail, numbers are correct.
+- While the form is submitted on a slow channel, the user cannot change the data in it.
+Important. Valid for AJAX forms.
+Low
+- Display hints and errors made with animation effect. Optional and depends on the project.
+- Send data button is inactive until the “Accept rules”, “User agreement” checkbox is not activated.
+- Send data button is inactive until all entered data have passed a positive validation.
+Open the form with fields for input, enter incorrect data, check whether the button is active.
+- If the data has not passed a positive validation, when you hover the cursor on the button to send data, an informational message is displayed.
+Open the form, enter incorrect data, hover the cursor on the button to send data, check whether the message is displayed.
+=====================================================
+:wq
+8. Запушить структуру на внешний репозиторий  
+git add check_list.txt ; git commit -m "created check_list.txt" ; git push --set-upstream origin CheckList
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main нажать кнопку Compare & pull request высветится есть ли разногласия с main и потом нажать Merge
+10. Синхронизировать Внешнюю и Локальную ветки Main   в терминале git fetch ; git pull
