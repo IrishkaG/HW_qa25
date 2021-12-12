@@ -7,7 +7,7 @@
 - SQL            Git branch SQL
 - Charles        Git branch Charles
 - Mobile testing Git branch Mobile_testing
-
+=============
 $ git branch
   Bug_reports
   Charles
@@ -17,7 +17,7 @@ $ git branch
   Postman
   SQL
 * main
-
+============
 
 2. Запушить все ветки на внешний репозиторий git push --all
 3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
